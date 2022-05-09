@@ -12,7 +12,7 @@ BEGIN
     uSQL1 := 'CREATE TABLE usuario (
     id_user INT NOT NULL,
     username VARCHAR(45) NULL,
-    birth_date VARCHAR(45) NULL,
+    birth_date DATE NULL,
     password VARCHAR(45) NULL,
     PRIMARY KEY (id_user))';
     EXECUTE IMMEDIATE uSQL1;
@@ -34,7 +34,6 @@ BEGIN
     
     uSQL3 := 'CREATE TABLE batallas (
       id_battle INT NOT NULL,
-      unidades VARCHAR(45) NULL,
       inicial_unidad_usu int,
       finalizar_unidades_usu int,
       inicial_unidad_ene int,
