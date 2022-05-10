@@ -1,16 +1,16 @@
 
-public class MissileLauncher extends Defense {
+public class BattleShip extends Defense {
 	
-	public MissileLauncher(int armor, int baseDamage) {
+	public BattleShip(int armor, int baseDamage) {
 		setInitialArmor(armor);
 		setArmor(armor);
 		setBaseDamage(baseDamage);
 	}
 	
-	public MissileLauncher() {
-		setInitialArmor(ARMOR_MISSILELAUNCHER);
-		setArmor(ARMOR_MISSILELAUNCHER);
-		setBaseDamage(BASE_DAMAGE_MISSILELAUNCHER);
+	public BattleShip() {
+		setInitialArmor(ARMOR_BATTLESHIP);
+		setArmor(ARMOR_BATTLESHIP);
+		setBaseDamage(BASE_DAMAGE_BATTLESHIP);
 	}
 
 	@Override
@@ -32,12 +32,12 @@ public class MissileLauncher extends Defense {
 
 	@Override
 	public int getMetalCost() {
-		return METAL_COST_MISSILELAUNCHER;
+		return METAL_COST_BATTLESHIP;
 	}
 
 	@Override
 	public int getDeuteriumCost() {
-		return DEUTERIUM_COST_MISSILELAUNCHER;
+		return DEUTERIUM_COST_BATTLESHIP;
 	}
 
 	@Override

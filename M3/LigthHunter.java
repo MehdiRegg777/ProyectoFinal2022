@@ -1,16 +1,16 @@
 
-public class MissileLauncher extends Defense {
+public class LigthHunter extends Defense {
 	
-	public MissileLauncher(int armor, int baseDamage) {
+	public LigthHunter(int armor, int baseDamage) {
 		setInitialArmor(armor);
 		setArmor(armor);
 		setBaseDamage(baseDamage);
 	}
 	
-	public MissileLauncher() {
-		setInitialArmor(ARMOR_MISSILELAUNCHER);
-		setArmor(ARMOR_MISSILELAUNCHER);
-		setBaseDamage(BASE_DAMAGE_MISSILELAUNCHER);
+	public LigthHunter() {
+		setInitialArmor(ARMOR_LIGTHHUNTER);
+		setArmor(ARMOR_LIGTHHUNTER);
+		setBaseDamage(BASE_DAMAGE_LIGTHHUNTER);
 	}
 
 	@Override
@@ -32,12 +32,12 @@ public class MissileLauncher extends Defense {
 
 	@Override
 	public int getMetalCost() {
-		return METAL_COST_MISSILELAUNCHER;
+		return METAL_COST_LIGTHHUNTER;
 	}
 
 	@Override
 	public int getDeuteriumCost() {
-		return DEUTERIUM_COST_MISSILELAUNCHER;
+		return DEUTERIUM_COST_LIGTHHUNTER;
 	}
 
 	@Override

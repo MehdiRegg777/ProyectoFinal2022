@@ -1,16 +1,16 @@
 
-public class MissileLauncher extends Defense {
+public class PlasmaCannon extends Defense {
 	
-	public MissileLauncher(int armor, int baseDamage) {
+	public PlasmaCannon(int armor, int baseDamage) {
 		setInitialArmor(armor);
 		setArmor(armor);
 		setBaseDamage(baseDamage);
 	}
 	
-	public MissileLauncher() {
-		setInitialArmor(ARMOR_MISSILELAUNCHER);
-		setArmor(ARMOR_MISSILELAUNCHER);
-		setBaseDamage(BASE_DAMAGE_MISSILELAUNCHER);
+	public PlasmaCannon() {
+		setInitialArmor(ARMOR_PLASMACANNON);
+		setArmor(ARMOR_PLASMACANNON);
+		setBaseDamage(BASE_DAMAGE_PLASMACANNON);
 	}
 
 	@Override
@@ -32,12 +32,12 @@ public class MissileLauncher extends Defense {
 
 	@Override
 	public int getMetalCost() {
-		return METAL_COST_MISSILELAUNCHER;
+		return METAL_COST_PLASMACANNON;
 	}
 
 	@Override
 	public int getDeuteriumCost() {
-		return DEUTERIUM_COST_MISSILELAUNCHER;
+		return DEUTERIUM_COST_PLASMACANNON;
 	}
 
 	@Override
