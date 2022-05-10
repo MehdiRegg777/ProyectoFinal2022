@@ -34,6 +34,3 @@ BEGIN
 GET_SHIP(1,s_nombre,s_metal,s_crystal,s_deuterium,s_initial,s_armor,s_base,s_speed,s_generate);
 DBMS_OUTPUT.PUT_LINE(s_nombre ||' '|| s_metal ||' ' || s_crystal ||' ' || s_deuterium ||' ' || s_initial ||' ' || s_armor ||' ' || s_base ||' ' || s_speed ||' ' || s_generate);
 end;
-
-
-

@@ -9,7 +9,8 @@ select count(*) into existe from sys.catalog where TNAME IN ('PLANETAS','USUARIO
 if existe != 7 or reset = 1 then
     DropTable();
     CREAR_TABLA();
-
+    INSERT_DATA();
+    DBMS_OUTPUT.PUT_LINE('Las tablas han sido creadas o actualizadas');
 else
     DBMS_OUTPUT.PUT_LINE('Las tablas ya han sido creadas');
 end if;
