@@ -10,7 +10,8 @@ if existe != 7 or reset = 1 then
     DropTable();
     CREAR_TABLA();
     INSERT_DATA();
-    DBMS_OUTPUT.PUT_LINE('Las tablas han sido creadas o actualizadas');
+    DBMS_OUTPUT.PUT_LINE('');
+    DBMS_OUTPUT.PUT_LINE('Las tablas han sido creadas o actualizadas correctamente...');
 else
     DBMS_OUTPUT.PUT_LINE('Las tablas ya han sido creadas');
 end if;
