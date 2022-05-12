@@ -18,7 +18,8 @@ BEGIN
     execute immediate 'INSERT INTO defensas  VALUES (2,''Ion Cannon'', 4000, 0, 500,1200,null,250,12,25)';
     execute immediate 'INSERT INTO defensas  VALUES (3,''PLasma Cannon'', 50000, 0, 5000,7000,null,2000,30,50)';
     DBMS_OUTPUT.PUT_LINE('Los datos de la tabla defensas han sido insertados');
+    execute immediate 'INSERT INTO usuario  VALUES (1,''losreyes'', ''07/12/1998'', ''P@ssw0rd'')';
+    DBMS_OUTPUT.PUT_LINE('Los datos de la tabla usuario han sido insertados');
 END INSERT_DATA;
-
 set SERVEROUTPUT on
 CALL INSERT_DATA();
