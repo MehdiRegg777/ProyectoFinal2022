@@ -1,3 +1,6 @@
+/***
+     Este script contendrán los procedures necesarios para cargar los datos de las defensas.
+***/
 create or replace procedure GET_DEFENSE (
 s_id in defensas.id_defense%TYPE, 
 s_nombre out defensas.nombre%TYPE,

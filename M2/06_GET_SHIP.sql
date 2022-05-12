@@ -1,3 +1,6 @@
+/***
+     Este scripts contendrán los procedures necesarios para cargar los datos de las naves.
+***/
 create or replace procedure GET_SHIP (
 s_id in naves.id_ship%TYPE, 
 s_nombre out naves.nombre%TYPE,

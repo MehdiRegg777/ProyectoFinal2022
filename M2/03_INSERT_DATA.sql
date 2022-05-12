@@ -1,5 +1,5 @@
 /***
-     elimina la tabla 
+     Incertar datos a la base de datos.
 ***/
 
 CREATE OR REPLACE PROCEDURE INSERT_DATA /* el nombre del procedure */

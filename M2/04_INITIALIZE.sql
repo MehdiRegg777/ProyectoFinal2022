@@ -1,3 +1,6 @@
+/***
+     Este script, se ejecutará cuando arranque la aplicación, para inicializar los los procedures 1...2...3.
+***/
 set serveroutput on
 create or replace procedure INITIALIZE(reset in numeric)
 as

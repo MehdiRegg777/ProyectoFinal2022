@@ -1,3 +1,6 @@
+/***
+     Creacion de tablas.
+***/
 set SERVEROUTPUT on
 CREATE OR REPLACE PROCEDURE CREAR_TABLA
 AS

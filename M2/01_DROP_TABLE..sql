@@ -1,5 +1,5 @@
 /***
-     elimina la tabla 
+     elimina la tabla.
 ***/
 
 CREATE OR REPLACE PROCEDURE DropTable /* el nombre del procedure */
