@@ -5,8 +5,11 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Menu;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -14,6 +17,7 @@ import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.Flow;
 
 import javax.imageio.ImageIO;
 import javax.swing.Action;
@@ -25,6 +29,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
 
 	
 class Ventana extends  JFrame {
@@ -359,6 +364,12 @@ class WinBuildShips extends  JFrame {
 	
 	JLabel title;
 	
+	JPanel panelCentral;
+	
+	JPanel attackShips;	
+	JPanel defenseShips;
+	
+	
 	public WinBuildShips(){
 		
 		setTitle("Build Ship");
@@ -373,8 +384,94 @@ class WinBuildShips extends  JFrame {
 		
 		title.setHorizontalAlignment(JLabel.CENTER);
 		this.add(title,BorderLayout.NORTH);
+	
+		
+		
+		panelCentral = new JPanel();
+		panelCentral.setLayout(new GridLayout(1,3));
+
+		
+		attackShips = new JPanel();
+		attackShips.add(new JLabel(new ImageIcon("planeta.jpg")));
+		
+		defenseShips = new JPanel();
+		defenseShips.add(new JLabel(new ImageIcon("planeta.jpg")));
+		
+		panelCentral.add(attackShips);
+		
+		panelCentral.add(defenseShips);
+
+		
+		this.add(panelCentral);
+		
+		attackShips.addMouseListener(new MouseListener() {
+			
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+			
+			
+			public void mousePressed(MouseEvent e) {
+				WinAttckShips  winattack = new WinAttckShips();
+				
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		defenseShips.addMouseListener(new MouseListener() {
+			
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mousePressed(MouseEvent e) {
+				
+				WinDefenseShips d1 = new WinDefenseShips();
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+
 		
 		setVisible(true);
+		
+		
 		
 	}
 	
@@ -410,10 +507,11 @@ class WinUpgradeTech extends  JFrame {
 class WinBattleRep extends  JFrame {
 	
 	JLabel title;
+
 	
 	public WinBattleRep() {
 		
-		setTitle("Battle Rep");
+			setTitle("Battle Rep");
 			setSize(1000,600);
 			setResizable(false);
 			setLocationRelativeTo(null);
@@ -426,12 +524,48 @@ class WinBattleRep extends  JFrame {
 			
 			title.setHorizontalAlignment(JLabel.CENTER);
 			this.add(title,BorderLayout.NORTH);
+						
 
 			
 			setVisible(true);
 			
 		}
+	
+	
 }
+	
+	
+class WinAttckShips extends JFrame {
+	
+	public WinAttckShips() {
+		
+		setTitle("Attack Ships");
+		setSize(600,300);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
+		
+
+		setVisible(true);
+		}
+	
+	}
+
+class WinDefenseShips extends JFrame {
+	
+	public WinDefenseShips() {
+		
+		setTitle("Defense Ships");
+		setSize(600,300);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(HIDE_ON_CLOSE);
+		
+		setVisible(true);
+		}
+	
+	}
+
 
 
 
