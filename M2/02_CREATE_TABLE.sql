@@ -80,7 +80,7 @@ BEGIN
     uSQL6 := 'CREATE TABLE planetas_has_naves (
       planetas_id_planetas INT NOT NULL,
       naves_id_ship INT NOT NULL,
-      cantidad VARCHAR(45) NULL,
+      cantidad INT NULL,
       PRIMARY KEY (planetas_id_planetas, naves_id_ship),
       CONSTRAINT planetas_has_naves1_fk FOREIGN KEY (planetas_id_planetas) REFERENCES planetas(id_planetas),
       CONSTRAINT planetas_has_naves2_fk FOREIGN KEY (naves_id_ship) REFERENCES naves(id_ship))';
