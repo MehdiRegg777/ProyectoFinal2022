@@ -21,5 +21,6 @@ BEGIN
     execute immediate 'INSERT INTO usuario  VALUES (1,''losreyes'', ''07/12/1998'', ''P@ssw0rd'')';
     DBMS_OUTPUT.PUT_LINE('Los datos de la tabla usuario han sido insertados');
 END INSERT_DATA;
+
 set SERVEROUTPUT on
 CALL INSERT_DATA();

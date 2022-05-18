@@ -20,21 +20,21 @@ BEGIN
     PRIMARY KEY (id_user))';
     EXECUTE IMMEDIATE uSQL1;
     DBMS_OUTPUT.PUT_LINE ('Table usuario ha sido creada.');
-    
+
     uSQL2 := 'CREATE TABLE planetas (
       id_planetas INT NOT NULL,
       nombre VARCHAR(45) NULL,
-      technology_attack VARCHAR(45) NULL,
-      technology_defense VARCHAR(45) NULL,
-      cristal VARCHAR(45) NULL,
-      metal VARCHAR(45) NULL,
-      deuterium VARCHAR(45) NULL,
+      technology_attack INT NULL,
+      technology_defense INT NULL,
+      cristal INT NULL,
+      metal INT NULL,
+      deuterium INT NULL,
       usuario_id_user INT NOT NULL,
       PRIMARY KEY (id_planetas),
       CONSTRAINT planetas_usuario_fk FOREIGN KEY (usuario_id_user) REFERENCES usuario(id_user))';
     EXECUTE IMMEDIATE uSQL2;
     DBMS_OUTPUT.PUT_LINE ('Table planetas ha sido creada.');
-    
+
     uSQL3 := 'CREATE TABLE batallas (
       id_battle INT NOT NULL,
       inicial_unidad_usu int,
@@ -46,7 +46,7 @@ BEGIN
       CONSTRAINT battle_usuario_fk FOREIGN KEY (usuario_id_user) REFERENCES usuario (id_user))';
     EXECUTE IMMEDIATE uSQL3;
     DBMS_OUTPUT.PUT_LINE ('Table batallas ha sido creada.');
-    
+
     uSQL4 := 'CREATE TABLE naves (
       id_ship INT NOT NULL,
       nombre VARCHAR(450) NULL,
@@ -61,7 +61,7 @@ BEGIN
       PRIMARY KEY (id_ship))';
         EXECUTE IMMEDIATE uSQL4;
         DBMS_OUTPUT.PUT_LINE ('Table naves ha sido creada.');
-        
+
      uSQL5 := 'CREATE TABLE defensas (
       id_defense INT NOT NULL,
       nombre VARCHAR(45) NULL,
@@ -76,17 +76,17 @@ BEGIN
       PRIMARY KEY (id_defense))';
         EXECUTE IMMEDIATE uSQL5;
         DBMS_OUTPUT.PUT_LINE ('Table defensas ha sido creada.');
-        
+
     uSQL6 := 'CREATE TABLE planetas_has_naves (
       planetas_id_planetas INT NOT NULL,
       naves_id_ship INT NOT NULL,
-      cantidad INT NULL,
+      cantidad VARCHAR(45) NULL,
       PRIMARY KEY (planetas_id_planetas, naves_id_ship),
       CONSTRAINT planetas_has_naves1_fk FOREIGN KEY (planetas_id_planetas) REFERENCES planetas(id_planetas),
       CONSTRAINT planetas_has_naves2_fk FOREIGN KEY (naves_id_ship) REFERENCES naves(id_ship))';
         EXECUTE IMMEDIATE uSQL6;
         DBMS_OUTPUT.PUT_LINE ('Table planetas_has_naves ha sido creada.');
-        
+
     uSQL7 := 'CREATE TABLE planetas_has_defensas (
       planetas_id_planetas INT NOT NULL,
       defensas_id_defense INT NOT NULL,
@@ -101,5 +101,5 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE ('Tabla de las tablas ya existe.');
 END CREAR_TABLA;
 
-set SERVEROUTPUT on
-CALL CREAR_TABLA();
+
+
