@@ -11,16 +11,3 @@ end if;
 
 end crearplaneta;
 
-call crearupdateplaneta('Planeta Andromeda',0,0,0,0,0);
-
-DROP TABLE batallas;
-DROP TABLE planetas_has_naves;
-DROP TABLE planetas_has_defensas;
-DROP TABLE planetas;
-DROP TABLE naves;
-DROP TABLE defensas;
-DROP TABLE usuario;
-
-select * from planetas;
-
-delete from planetas where id_planetas = 1;
